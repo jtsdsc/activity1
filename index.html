@@ -2,6 +2,100 @@
 <html>
     <head>
         <title>Simple Calculator</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #cfe0fd;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            } 
+            .container {
+                background: rgb(253, 252, 252);
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px;
+                width: 350px;
+                text-align: center;
+            
+            } 
+            h1 {
+                margin-top: 0;
+            }
+            input {
+
+                width: 80%;
+                padding: 10px;
+                margin: 10px 0;
+                font-size: 16px;
+                border: 2px solid #ddd;
+                border-radius: 8px;
+                transition: 0.2s;
+            }
+            input:focus {
+                border-color: #2955e6;
+            }
+            button {
+                width: 50px;
+                padding: 10px;
+                margin: 8px;
+                font-size: 18px;
+                border: none;
+                border-radius: 8px;
+                background: #3986eb;
+                color: white;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+            button:hover {
+                background: #2c6fcc;
+                transform: scale(1.05);
+            }
+            .modal-bg {
+                display: none;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                justify-content: center;
+                align-items: center;
+            }
+            .modal-box {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                width: 300px;
+                text-align: center;
+            }
+            .close-btn {
+                margin-top: 30px;
+                padding: 10px 40px;
+                border: none;
+                border-radius: 8px;
+                background: #e04e4e;
+                color: white;
+                cursor: pointer;
+                transition: 0.2s;
+                width: auto;
+            }
+            .close-btn:hover {
+                background: #c43b3b;
+                transform: scale(1.05);
+            }
+            .about-btn {
+                width: auto;
+                top: 20px;
+                right: 20px;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 8px;
+                background: #3986eb;
+                color: white;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
@@ -11,7 +105,7 @@
             <input type="text" id="num1" placeholder="Enter First Number"/>
             <input type="text" id="num2" placeholder="Enter Second Number"/>
             <br>
-            <button onclick="Add()">+</button>
+            <button onclick="add()">+</button>
             <button onclick="subtract()">-</button>
             <button onclick="multiply()">*</button>
             <button onclick ="divide()">/</button>
